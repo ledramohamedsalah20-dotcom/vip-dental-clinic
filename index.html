@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>VIP Dental Clinic DZ | Cabinet Dentaire à Kouba</title>
+
+  <meta
+    name="description"
+    content="VIP Dental Clinic DZ à Kouba, Alger. Une expérience dentaire moderne, professionnelle et centrée sur votre confort."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --navy: #0d2233;
+      --navy-2: #17384f;
+      --navy-3: #234f68;
+
+      --gold: #c8a96a;
+      --gold-light: #e9d5a4;
+
+      --cream: #f8f6f1;
+      --white: #ffffff;
+      --text: #18303f;
+      --muted: #6c7b84;
+
+      --border: rgba(13, 34, 51, .10);
+
+      --shadow:
+        0 24px 70px rgba(13, 34, 51, .12);
+
+      --radius: 28px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    /* ============================
+       TOP BAR
+    ============================ */
+
+    .topbar {
+      background: var(--navy);
+      color: rgba(255,255,255,.82);
+      font-size: 13px;
+    }
+
+    .topbar-inner {
+      min-height: 42px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .topbar-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .topbar strong {
+      color: white;
+      font-weight: 600;
+    }
+
+    /* ============================
+       NAVBAR
+    ============================ */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 246, 241, .92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(13, 34, 51, .06);
+    }
+
+    .navbar {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background:
+        linear-gradient(135deg, var(--gold), #e4d4aa);
+      color: var(--navy);
+      display: grid;
+      place-items: center;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+      font-weight: 700;
+      box-shadow:
+        0 10px 25px rgba(200,169,106,.25);
+    }
+
+    .brand-text strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+      font-size: 19px;
+      letter-spacing: .02em;
+    }
+
+    .brand-text span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      color: #435561;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .25s;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+
+      min-height: 50px;
+      padding: 0 22px;
+
+      border-radius: 999px;
+      border: 0;
+
+      font-weight: 700;
+      font-size: 14px;
+
+      cursor: pointer;
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--navy);
+      box-shadow:
+        0 14px 30px rgba(13, 34, 51, .18);
+    }
+
+    .btn-primary:hover {
+      background: var(--navy-2);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+      box-shadow:
+        0 14px 30px rgba(200, 169, 106, .24);
+    }
+
+    .btn-outline {
+      color: white;
+      border: 1px solid rgba(255,255,255,.28);
+      background: rgba(255,255,255,.07);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    /* ============================
+       HERO
+    ============================ */
+
+    .hero {
+      position: relative;
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--navy);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      right: -280px;
+      top: -260px;
+
+      border-radius: 50%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(200,169,106,.22),
+          transparent 65%
+        );
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      left: -320px;
+      bottom: -260px;
+
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      align-items: center;
+      gap: 70px;
+
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 700;
+
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      max-width: 690px;
+
+      margin-top: 23px;
+
+      font-family: "Playfair Display", serif;
+      color: white;
+      font-size: clamp(48px, 6vw, 78px);
+      line-height: .99;
+      letter-spacing: -.035em;
+      font-weight: 600;
+    }
+
+    .hero h1 em {
+      color: var(--gold-light);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .hero-description {
+      max-width: 590px;
+      margin-top: 26px;
+
+      color: rgba(255,255,255,.72);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 35px;
+    }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 38px;
+    }
+
+    .stars {
+      color: #f4c95d;
+      letter-spacing: 2px;
+      font-size: 18px;
+    }
+
+    .hero-trust strong {
+      color: white;
+    }
+
+    .hero-trust p {
+      color: rgba(255,255,255,.58);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+    }
+
+    .hero-image {
+      position: relative;
+      height: 570px;
+      border-radius: 280px 280px 30px 30px;
+      overflow: hidden;
+
+      box-shadow:
+        0 35px 80px rgba(0,0,0,.28);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          to top,
+          rgba(13,34,51,.30),
+          transparent 45%
+        );
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      left: -60px;
+      bottom: 45px;
+      z-index: 5;
+
+      width: 230px;
+      padding: 22px;
+
+      border-radius: 22px;
+      background: rgba(255,255,255,.96);
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.20);
+    }
+
+    .hero-floating-card .icon {
+      width: 45px;
+      height: 45px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+      background: rgba(200,169,106,.18);
+      color: var(--gold);
+
+      font-size: 19px;
+    }
+
+    .hero-floating-card strong {
+      display: block;
+      margin-top: 13px;
+
+      color: var(--navy);
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+    }
+
+    .hero-floating-card p {
+      margin-top: 6px;
+
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* ============================
+       STATS
+    ============================ */
+
+    .stats {
+      position: relative;
+      z-index: 5;
+
+      width: min(1050px, calc(100% - 40px));
+      margin: -45px auto 0;
+
+      background: white;
+      border-radius: 28px;
+
+      box-shadow: var(--shadow);
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      overflow: hidden;
+    }
+
+    .stat {
+      padding: 30px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 31px;
+      color: var(--navy);
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 6px;
+
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+    }
+
+    /* ============================
+       COMMON SECTIONS
+    ============================ */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+    }
+
+    .section-heading.center {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin-top: 15px;
+
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+
+      font-size: clamp(37px, 5vw, 54px);
+      line-height: 1.08;
+      letter-spacing: -.03em;
+    }
+
+    .section-heading p {
+      margin-top: 19px;
+
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* ============================
+       EXPERIENCE / PROCESS
+    ============================ */
+
+    .experience {
+      background: var(--cream);
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .experience-image {
+      position: relative;
+      min-height: 580px;
+    }
+
+    .experience-image img {
+      width: 88%;
+      height: 530px;
+
+      object-fit: cover;
+      border-radius: 32px;
+
+      box-shadow: var(--shadow);
+    }
+
+    .experience-image .small-image {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      width: 240px;
+      height: 245px;
+
+      border: 8px solid var(--cream);
+      border-radius: 25px;
+
+      object-fit: cover;
+    }
+
+    .experience-badge {
+      position: absolute;
+      top: 28px;
+      right: 10px;
+
+      width: 130px;
+      height: 130px;
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+      text-align: center;
+
+      background: var(--gold);
+      color: var(--navy);
+
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.35;
+
+      transform: rotate(8deg);
+    }
+
+    .experience-content h2 {
+      margin-top: 16px;
+
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+
+      font-size: clamp(37px, 4.7vw, 54px);
+      line-height: 1.08;
+      letter-spacing: -.03em;
+    }
+
+    .experience-content > p {
+      margin-top: 22px;
+
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .process {
+      margin-top: 33px;
+    }
+
+    .process-item {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      gap: 17px;
+
+      padding: 19px 0;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .process-number {
+      width: 46px;
+      height: 46px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--navy);
+      color: var(--gold-light);
+
+      font-family: "Playfair Display", serif;
+    }
+
+    .process-item h3 {
+      color: var(--navy);
+      font-size: 16px;
+    }
+
+    .process-item p {
+      margin-top: 5px;
+
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* ============================
+       VALUES
+    ============================ */
+
+    .values {
+      background: white;
+    }
+
+    .cards {
+      margin-top: 55px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      position: relative;
+
+      min-height: 310px;
+      padding: 34px;
+
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+
+      background: white;
+
+      overflow: hidden;
+      transition: .35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+
+      box-shadow:
+        0 25px 60px rgba(13, 34, 51, .10);
+    }
+
+    .card-icon {
+      width: 60px;
+      height: 60px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: rgba(200,169,106,.15);
+      color: var(--gold);
+
+      font-size: 23px;
+    }
+
+    .card h3 {
+      margin-top: 25px;
+
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      color: var(--navy);
+    }
+
+    .card p {
+      margin-top: 14px;
+
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .card-index {
+      position: absolute;
+      right: 25px;
+      bottom: 15px;
+
+      color: rgba(13,34,51,.045);
+
+      font-family: "Playfair Display", serif;
+      font-size: 80px;
+      font-weight: 700;
+    }
+
+    /* ============================
+       REVIEWS
+    ============================ */
+
+    .reviews {
+      background: var(--navy);
+      color: white;
+    }
+
+    .reviews .section-heading h2 {
+      color: white;
+    }
+
+    .reviews .section-heading p {
+      color: rgba(255,255,255,.62);
+    }
+
+    .review-score {
+      margin-top: 50px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .big-score {
+      font-family: "Playfair Display", serif;
+      font-size: 94px;
+      line-height: 1;
+      color: var(--gold-light);
+    }
+
+    .score-info .stars {
+      font-size: 21px;
+    }
+
+    .score-info strong {
+      display: block;
+      margin-top: 7px;
+      font-size: 15px;
+    }
+
+    .score-info p {
+      margin-top: 5px;
+      color: rgba(255,255,255,.55);
+      font-size: 13px;
+    }
+
+    /* ============================
+       CTA
+    ============================ */
+
+    .cta {
+      padding: 90px 0;
+      background: var(--gold);
+    }
+
+    .cta-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .cta h2 {
+      max-width: 650px;
+
+      font-family: "Playfair Display", serif;
+      color: var(--navy);
+
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.08;
+    }
+
+    .cta p {
+      margin-top: 12px;
+      color: rgba(13,34,51,.70);
+    }
+
+    /* ============================
+       CONTACT
+    ============================ */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 45px;
+    }
+
+    .contact-panel {
+      padding: 45px;
+
+      border-radius: 30px;
+      background: var(--navy);
+      color: white;
+    }
+
+    .contact-panel h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 41px;
+      line-height: 1.1;
+    }
+
+    .contact-panel > p {
+      margin-top: 14px;
+
+      color: rgba(255,255,255,.60);
+      line-height: 1.7;
+    }
+
+    .contact-item {
+      margin-top: 30px;
+    }
+
+    .contact-item span {
+      display: block;
+
+      color: var(--gold-light);
+
+      font-size: 11px;
+      font-weight: 700;
+
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .contact-item a,
+    .contact-item p {
+      display: block;
+
+      margin-top: 7px;
+
+      color: white;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .map {
+      min-height: 540px;
+
+      border-radius: 30px;
+      overflow: hidden;
+
+      box-shadow: var(--shadow);
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 540px;
+
+      border: 0;
+    }
+
+    /* ============================
+       FOOTER
+    ============================ */
+
+    footer {
+      padding: 45px 0;
+
+      background: #091924;
+      color: rgba(255,255,255,.56);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+
+      font-size: 13px;
+    }
+
+    .footer-brand {
+      color: white;
+      font-family: "Playfair Display", serif;
+      font-size: 18px;
+    }
+
+    /* ============================
+       WHATSAPP
+    ============================ */
+
+    .whatsapp {
+      position: fixed;
+      z-index: 1000;
+
+      right: 24px;
+      bottom: 24px;
+
+      width: 61px;
+      height: 61px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: #25d366;
+      color: white;
+
+      font-size: 27px;
+
+      box-shadow:
+        0 15px 35px rgba(37,211,102,.35);
+
+      transition: .25s;
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-4px) scale(1.04);
+    }
+
+    /* ============================
+       ANIMATIONS
+    ============================ */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition:
+        opacity .8s ease,
+        transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================
+       MOBILE
+    ============================ */
+
+    @media (max-width: 980px) {
+
+      .topbar {
+        display: none;
+      }
+
+      nav {
+        position: fixed;
+        top: 85px;
+        left: 20px;
+        right: 20px;
+
+        padding: 25px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        border-radius: 22px;
+
+        background: white;
+
+        box-shadow:
+          0 25px 70px rgba(13,34,51,.18);
+
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+
+        transition: .25s ease;
+      }
+
+      nav.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      nav a {
+        padding: 8px 5px;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image-wrap {
+        max-width: 630px;
+        margin-inline: auto;
+      }
+
+      .hero-floating-card {
+        left: 15px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat:nth-child(2) {
+        border-right: 0;
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .experience-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 620px) {
+
+      .container {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .brand-text strong {
+        font-size: 15px;
+      }
+
+      .brand-text span {
+        font-size: 9px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        padding: 65px 0 100px;
+        gap: 50px;
+      }
+
+      .hero h1 {
+        font-size: 49px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-image {
+        height: 430px;
+        border-radius: 200px 200px 25px 25px;
+      }
+
+      .hero-floating-card {
+        left: 12px;
+        bottom: 20px;
+
+        width: 200px;
+      }
+
+      .stats {
+        margin-top: -40px;
+      }
+
+      .stat {
+        padding: 22px 10px;
+      }
+
+      .stat strong {
+        font-size: 25px;
+      }
+
+      .stat span {
+        font-size: 9px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .experience-image {
+        min-height: 450px;
+      }
+
+      .experience-image img {
+        width: 100%;
+        height: 410px;
+      }
+
+      .experience-image .small-image,
+      .experience-badge {
+        display: none;
+      }
+
+      .contact-panel {
+        padding: 32px 25px;
+      }
+
+      .map,
+      .map iframe {
+        min-height: 430px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .whatsapp {
+        right: 17px;
+        bottom: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================
+       TOP BAR
+  ========================================== -->
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+
+      <div class="topbar-group">
+        <span>
+          📍 <strong>Noble Terre, Kouba, Alger</strong>
+        </span>
+
+        <span>
+          🕒 Samedi – Jeudi : 08:30 – 21:00
+        </span>
+      </div>
+
+      <a href="tel:+213541279450">
+        ☎ 0541 27 94 50
+      </a>
+
+    </div>
+  </div>
+
+
+  <!-- =========================================
+       NAVIGATION
+  ========================================== -->
+
+  <header>
+    <div class="container navbar">
+
+      <a href="#" class="brand">
+
+        <div class="brand-logo">
+          VIP
+        </div>
+
+        <div class="brand-text">
+          <strong>VIP Dental Clinic DZ</strong>
+          <span>Dental Care · Kouba</span>
+        </div>
+
+      </a>
+
+
+      <nav id="nav">
+
+        <a href="#accueil">
+          Accueil
+        </a>
+
+        <a href="#clinique">
+          La clinique
+        </a>
+
+        <a href="#approche">
+          Notre approche
+        </a>
+
+        <a href="#avis">
+          Avis
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+        <a
+          class="btn btn-primary"
+          target="_blank"
+          href="https://wa.me/213541279450?text=Bonjour%20VIP%20Dental%20Clinic%20DZ%2C%20je%20souhaite%20prendre%20rendez-vous."
+        >
+          Prendre rendez-vous
+        </a>
+
+      </nav>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Ouvrir le menu"
+      >
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- =========================================
+       HERO
+  ========================================== -->
+
+  <main>
+
+    <section class="hero" id="accueil">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Cabinet dentaire · Kouba
+          </div>
+
+          <h1>
+            Votre sourire mérite une
+            <em>attention particulière.</em>
+          </h1>
+
+          <p class="hero-description">
+            Une expérience dentaire pensée autour de votre
+            confort, de votre confiance et d'un accompagnement
+            personnalisé, au cœur de Kouba.
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a
+              class="btn btn-gold"
+              target="_blank"
+              href="https://wa.me/213541279450?text=Bonjour%20VIP%20Dental%20Clinic%20DZ%2C%20je%20souhaite%20prendre%20rendez-vous."
+            >
+              Réserver via WhatsApp
+              <span>→</span>
+            </a>
+
+            <a
+              class="btn btn-outline"
+              href="tel:+213541279450"
+            >
+              ☎ Appeler la clinique
+            </a>
+
+          </div>
+
+
+          <div class="hero-trust">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <div>
+              <strong>5,0 / 5</strong>
+
+              <p>
+                Environ 100 avis Google
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-image-wrap">
+
+          <!--
+            Photo de démonstration.
+            À remplacer idéalement par une vraie photo
+            de VIP Dental Clinic avant publication.
+          -->
+
+          <div class="hero-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1642844771937-23accb161a3d?auto=format&fit=crop&w=1200&q=85"
+              alt="Cabinet dentaire moderne"
+            >
+
+          </div>
+
+
+          <div class="hero-floating-card">
+
+            <div class="icon">
+              ♡
+            </div>
+
+            <strong>
+              Votre confort d'abord
+            </strong>
+
+            <p>
+              Un accompagnement clair et rassurant,
+              de la première consultation au suivi.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         QUICK STATS
+    ========================================== -->
+
+    <div class="stats reveal">
+
+      <div class="stat">
+        <strong>5.0</strong>
+        <span>Note Google</span>
+      </div>
+
+      <div class="stat">
+        <strong>100+</strong>
+        <span>Avis patients</span>
+      </div>
+
+      <div class="stat">
+        <strong>08:30</strong>
+        <span>Ouverture</span>
+      </div>
+
+      <div class="stat">
+        <strong>21:00</strong>
+        <span>Fermeture</span>
+      </div>
+
+    </div>
+
+
+    <!-- =========================================
+         EXPERIENCE
+    ========================================== -->
+
+    <section
+      class="experience"
+      id="clinique"
+    >
+
+      <div class="container experience-grid">
+
+        <div class="experience-image reveal">
+
+          <img
+            src="https://images.unsplash.com/photo-1777331903190-341a3dd0441b?auto=format&fit=crop&w=1000&q=85"
+            alt="Consultation dans un cabinet dentaire moderne"
+          >
+
+          <img
+            class="small-image"
+            src="https://images.unsplash.com/photo-1662837625427-970713d74aa6?auto=format&fit=crop&w=600&q=85"
+            alt="Soin dentaire"
+          >
+
+          <div class="experience-badge">
+            UNE EXPÉRIENCE<br>
+            PENSÉE POUR<br>
+            VOUS
+          </div>
+
+        </div>
+
+
+        <div class="experience-content reveal">
+
+          <div class="eyebrow" style="color:#927640;">
+            Notre approche
+          </div>
+
+          <h2>
+            Des soins dentaires dans un cadre moderne et rassurant.
+          </h2>
+
+          <p>
+            Chaque patient est différent. L'objectif est donc
+            de proposer un parcours clair : comprendre votre
+            situation, expliquer les différentes étapes et
+            assurer un suivi adapté.
+          </p>
+
+
+          <div class="process">
+
+            <div class="process-item">
+
+              <div class="process-number">
+                01
+              </div>
+
+              <div>
+                <h3>Première consultation</h3>
+
+                <p>
+                  Échange avec le praticien afin de comprendre
+                  votre besoin et vos attentes.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="process-item">
+
+              <div class="process-number">
+                02
+              </div>
+
+              <div>
+                <h3>Évaluation & diagnostic</h3>
+
+                <p>
+                  Analyse de votre situation avant de définir
+                  la prise en charge adaptée.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="process-item">
+
+              <div class="process-number">
+                03
+              </div>
+
+              <div>
+                <h3>Plan de traitement</h3>
+
+                <p>
+                  Présentation claire des différentes étapes
+                  avant de commencer.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="process-item">
+
+              <div class="process-number">
+                04
+              </div>
+
+              <div>
+                <h3>Suivi</h3>
+
+                <p>
+                  Un accompagnement permettant de suivre
+                  l'évolution de votre santé bucco-dentaire.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         VALUES
+    ========================================== -->
+
+    <section
+      class="values"
+      id="approche"
+    >
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <div
+            class="eyebrow"
+            style="color:#927640; justify-content:center;"
+          >
+            VIP Dental Clinic
+          </div>
+
+          <h2>
+            Une expérience pensée autour du patient.
+          </h2>
+
+          <p>
+            Un cabinet dentaire ne doit pas seulement être
+            visible en ligne. Il doit immédiatement inspirer
+            confiance et faciliter la prise de contact.
+          </p>
+
+        </div>
+
+
+        <div class="cards">
+
+          <article class="card reveal">
+
+            <div class="card-icon">
+              ♡
+            </div>
+
+            <h3>
+              Écoute & confort
+            </h3>
+
+            <p>
+              Une prise en charge centrée sur le patient,
+              avec des explications simples et un parcours
+              rassurant.
+            </p>
+
+            <div class="card-index">
+              01
+            </div>
+
+          </article>
+
+
+          <article class="card reveal">
+
+            <div class="card-icon">
+              ✦
+            </div>
+
+            <h3>
+              Approche moderne
+            </h3>
+
+            <p>
+              Une image professionnelle et contemporaine,
+              cohérente avec les attentes des patients
+              d'aujourd'hui.
+            </p>
+
+            <div class="card-index">
+              02
+            </div>
+
+          </article>
+
+
+          <article class="card reveal">
+
+            <div class="card-icon">
+              ✓
+            </div>
+
+            <h3>
+              Suivi personnalisé
+            </h3>
+
+            <p>
+              Une relation qui ne s'arrête pas à la consultation,
+              avec une attention portée au suivi du patient.
+            </p>
+
+            <div class="card-index">
+              03
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         GOOGLE REVIEWS
+    ========================================== -->
+
+    <section
+      class="reviews"
+      id="avis"
+    >
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <div
+            class="eyebrow"
+            style="justify-content:center;"
+          >
+            Avis patients
+          </div>
+
+          <h2>
+            Une réputation qui inspire confiance.
+          </h2>
+
+          <p>
+            Les avis en ligne sont souvent le premier élément
+            consulté par un nouveau patient avant de contacter
+            un cabinet.
+          </p>
+
+        </div>
+
+
+        <div class="review-score reveal">
+
+          <div class="big-score">
+            5.0
+          </div>
+
+          <div class="score-info">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <strong>
+              Note Google
+            </strong>
+
+            <p>
+              Environ 100 avis patients
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CTA
+    ========================================== -->
+
+    <section class="cta">
+
+      <div class="container cta-inner reveal">
+
+        <div>
+
+          <h2>
+            Besoin d'un rendez-vous ?
+          </h2>
+
+          <p>
+            Contactez directement VIP Dental Clinic DZ.
+          </p>
+
+        </div>
+
+
+        <a
+          class="btn btn-primary"
+          target="_blank"
+          href="https://wa.me/213541279450?text=Bonjour%20VIP%20Dental%20Clinic%20DZ%2C%20je%20souhaite%20prendre%20un%20rendez-vous.%20Pourriez-vous%20m'indiquer%20vos%20disponibilités%20s'il%20vous%20plaît%20%3F"
+        >
+          Prendre rendez-vous
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTACT + MAP
+    ========================================== -->
+
+    <section
+      class="contact"
+      id="contact"
+    >
+
+      <div class="container contact-grid">
+
+        <div class="contact-panel reveal">
+
+          <h2>
+            Nous trouver à Kouba.
+          </h2>
+
+          <p>
+            Pour une demande de rendez-vous ou une information,
+            contactez directement la clinique.
+          </p>
+
+
+          <div class="contact-item">
+
+            <span>
+              Adresse
+            </span>
+
+            <p>
+              Noble Terre<br>
+              Kouba 16006<br>
+              Alger, Algérie
+            </p>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <span>
+              Téléphone
+            </span>
+
+            <a href="tel:+213541279450">
+              0541 27 94 50
+            </a>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <span>
+              Horaires
+            </span>
+
+            <p>
+              Samedi – Jeudi<br>
+              08:30 – 21:00
+            </p>
+
+          </div>
+
+
+          <div
+            style="
+              display:flex;
+              flex-direction:column;
+              gap:12px;
+              margin-top:34px;
+            "
+          >
+
+            <a
+              class="btn btn-gold"
+              target="_blank"
+              href="https://wa.me/213541279450?text=Bonjour%20VIP%20Dental%20Clinic%20DZ%2C%20je%20souhaite%20prendre%20rendez-vous."
+            >
+              WhatsApp
+            </a>
+
+            <a
+              class="btn btn-outline"
+              target="_blank"
+              href="https://maps.app.goo.gl/dMENDdoazMt9xVqH9"
+            >
+              Ouvrir Google Maps
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="map reveal">
+
+          <iframe
+            src="https://www.google.com/maps?q=36.7301033,3.0924797&z=16&output=embed"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localisation VIP Dental Clinic DZ"
+          ></iframe>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        VIP Dental Clinic DZ
+      </div>
+
+      <p>
+        © <span id="year"></span>
+        VIP Dental Clinic DZ · Kouba, Alger
+      </p>
+
+      <a href="tel:+213541279450">
+        0541 27 94 50
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================
+       FLOATING WHATSAPP
+  ========================================== -->
+
+  <a
+    class="whatsapp"
+    target="_blank"
+    aria-label="Contacter sur WhatsApp"
+    href="https://wa.me/213541279450?text=Bonjour%20VIP%20Dental%20Clinic%20DZ%2C%20je%20souhaite%20prendre%20rendez-vous."
+  >
+    ☏
+  </a>
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script>
+
+    /* Mobile menu */
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const nav =
+      document.getElementById("nav");
+
+    menuToggle.addEventListener(
+      "click",
+      () => {
+
+        nav.classList.toggle("active");
+
+        menuToggle.textContent =
+          nav.classList.contains("active")
+          ? "✕"
+          : "☰";
+
+      }
+    );
+
+
+    /* Close menu after click */
+
+    document
+      .querySelectorAll("nav a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            nav.classList.remove("active");
+            menuToggle.textContent = "☰";
+
+          }
+        );
+
+      });
+
+
+    /* Reveal animations */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const observer =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if(entry.isIntersecting) {
+
+              entry.target
+                .classList
+                .add("visible");
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.12
+        }
+
+      );
+
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+
+
+    /* Current year */
+
+    document.getElementById("year")
+      .textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
